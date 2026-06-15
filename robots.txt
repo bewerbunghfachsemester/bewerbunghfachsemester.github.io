@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /losverfahren/
+Allow: /medizin-restplaetze/
 
 Sitemap: https://www.bewerbungsrenner.com/sitemap.xml
