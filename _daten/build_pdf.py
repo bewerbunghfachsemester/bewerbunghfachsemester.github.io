@@ -14,6 +14,9 @@ from common import (
 
 LOGGER = logging.getLogger("build_pdf")
 
+FONTS = ("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800"
+         "&family=IBM+Plex+Mono:wght@400;500&display=swap")
+
 CHROME_BINARY = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 HTML_PATH = BUILD_DIR / "uni-liste.html"
 
@@ -34,8 +37,10 @@ COLUMNS = ("Universität", "Bewerbung SS", "Bewerbung WS", "Nachreichfrist", "Ar
 STYLES = """
 @page { size: A4 landscape; margin: 11mm 10mm 12mm; }
 * { box-sizing: border-box; }
-body { margin: 0; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 8.4pt; color: #111; }
-h1 { margin: 0; font-size: 17pt; letter-spacing: -0.01em; }
+body { margin: 0; font-family: "Archivo", "Helvetica Neue", Arial, sans-serif; font-size: 8.4pt; color: #111; }
+h1 { margin: 0; font-size: 22pt; font-stretch: 72%; font-weight: 760; letter-spacing: -0.01em; }
+.sub, .intro, thead th, .foot { font-family: "IBM Plex Mono", Menlo, monospace; }
+td:nth-child(2), td:nth-child(3), td:nth-child(4) { font-family: "IBM Plex Mono", Menlo, monospace; font-size: 7.6pt; }
 .sub { margin: 2pt 0 6pt; font-size: 9pt; color: #444; }
 .intro { margin: 0 0 8pt; font-size: 8pt; color: #333; }
 table { width: 100%; border-collapse: collapse; table-layout: fixed; }
@@ -44,14 +49,14 @@ th:nth-child(4) { width: 10%; } th:nth-child(5) { width: 7.5%; } th:nth-child(6)
 th:nth-child(7) { width: 20%; } th:nth-child(8) { width: 16%; }
 td { overflow-wrap: anywhere; }
 thead th { text-align: left; font-size: 7.4pt; text-transform: uppercase; letter-spacing: 0.04em;
-  color: #444; border-bottom: 1.2pt solid #111; padding: 4pt 4pt; }
+  color: #444; border-bottom: 1.6pt solid #111; padding: 4pt 4pt; }
 tbody td { vertical-align: top; padding: 4pt 4pt; border-bottom: 0.5pt solid #ccc; }
 tr { break-inside: avoid; }
 .name { font-weight: 700; font-size: 8.8pt; }
 .hint { display: block; margin-top: 2pt; font-size: 7.3pt; color: #444; }
 .scope { display: block; font-size: 7.3pt; color: #444; }
 .scope.higher { color: #111; font-weight: 700; }
-a { color: #0b4fb3; text-decoration: none; }
+a { color: #111; text-decoration: underline; text-decoration-color: #ff5b14; text-underline-offset: 1.5pt; }
 .links a { display: block; padding: 2.5pt 0; }
 .links a + a { border-top: 0.6pt solid #b9b9b9; }
 .foot { margin-top: 8pt; font-size: 7.4pt; color: #444; }
@@ -88,7 +93,7 @@ def document_html(data):
     rows = "\n".join(row_html(uni) for uni in data["unis"])
     return (
         f'<!doctype html><html lang="de"><head><meta charset="utf-8"><title>{esc(TITLE)}</title>'
-        f"<style>{STYLES}</style></head><body>"
+        f'<link rel="stylesheet" href="{FONTS}"><style>{STYLES}</style></head><body>'
         f"<h1>{esc(TITLE)}</h1><p class=\"sub\">{esc(SUBTITLE.format(stand=data['stand']))}</p>"
         f'<p class="intro">{esc(INTRO)}</p>'
         f"<table><thead><tr>{head}</tr></thead><tbody>\n{rows}\n</tbody></table>"
