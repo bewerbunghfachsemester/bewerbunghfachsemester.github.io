@@ -6,3 +6,6 @@ link-check-report.csv
 # Erzeugte Zwischendateien der Datenskripte
 _daten/build/
 _daten/__pycache__/
+
+# Private Unterlagen (Verträge, Erklärungen) – niemals veröffentlichen
+/[0-9][0-9][0-9][0-9]-*_Bewerbungsrenner_*
