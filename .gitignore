@@ -2,3 +2,7 @@
 tools/
 link-check-report.csv
 *-screenshot.png
+
+# Erzeugte Zwischendateien der Datenskripte
+_daten/build/
+_daten/__pycache__/
