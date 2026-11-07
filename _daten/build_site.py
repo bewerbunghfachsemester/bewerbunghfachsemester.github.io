@@ -12,6 +12,7 @@ from common import (
     PDF_URL, ROOT_DIR, SCOPE_ALSO_HIGHER, contact_html, display_name, esc,
     link_html, load_data, portal_url, scope_badge,
 )
+from uni_page import SECTION_PATH
 
 LOGGER = logging.getLogger("build_site")
 
@@ -53,6 +54,15 @@ def replace_marked(text, name, new_inner, insert_before):
     return text.replace(insert_before, f"{block}\n        {insert_before}", 1)
 
 
+def subpage(uni):
+    """Pfad der eigenen Uni-Unterseite."""
+    return f"{SECTION_PATH}{uni['id']}/"
+
+
+def subpage_link(uni):
+    return f'              <a href="{subpage(uni)}">Alle Infos zu {esc(uni["kurz"])} &rarr;</a>'
+
+
 def los_cell(uni):
     los = uni["los"]
     text = link_html(los["ws"], los["url"]) if los["url"] else esc(los["ws"])
@@ -63,7 +73,7 @@ def los_cell(uni):
 def start_rows(unis):
     rows = [
         "\n              <tr>\n"
-        f'                <th scope="row">{esc(display_name(uni))}</th>\n'
+        f'                <th scope="row"><a href="{subpage(uni)}">{esc(display_name(uni))}</a></th>\n'
         f"                <td>{esc(uni['ss'])}</td>\n"
         f"                <td>{esc(uni['ws'])}</td>\n"
         f"                <td>{esc(uni['art'])}</td>\n"
@@ -95,7 +105,7 @@ def start_card(uni):
         f'\n          <article class="uni-card" id="{esc(uni["id"])}">\n'
         f"            <h3>{esc(uni['name'])}</h3>\n"
         f'            <dl class="uni-facts">\n{facts}            </dl>\n{note}'
-        f'            <p class="uni-links">\n{links}{los_link}\n            </p>\n'
+        f'            <p class="uni-links">\n{subpage_link(uni)}\n{links}{los_link}\n            </p>\n'
         "          </article>\n"
     )
 
@@ -122,7 +132,8 @@ def los_head(data):
 
 def los_card(uni):
     los = uni["los"]
-    link = f'            <p class="uni-links">\n              {link_html(LABEL_LOS_PAGE, los["url"], "↗")}\n            </p>\n' if los["url"] else ""
+    official = f'\n              {link_html(LABEL_LOS_PAGE, los["url"], "↗")}' if los["url"] else ""
+    link = f'            <p class="uni-links">\n{subpage_link(uni)}{official}\n            </p>\n'
     return (
         f'\n          <article class="uni-card" id="{esc(uni["id"])}">\n'
         f"            <h3>Losverfahren {esc(display_name(uni))}</h3>\n"
