@@ -13,7 +13,10 @@
       "mail": "studienberatung@rwth-aachen.de",
       "hinweis": "Laut Medizinischer Fakultät der RWTH ist eine Bewerbung in höhere Fachsemester des Regelstudiengangs Medizin nicht mehr möglich – bitte vor der Bewerbung bei der Uni nachfragen.",
       "links": [
-        ["Bewerbungsportal", "https://online.rwth-aachen.de/RWTHonline/"],
+        [
+          "Bewerbungsportal",
+          "https://online.rwth-aachen.de/RWTHonline/"
+        ],
         [
           "Ortswechsel & Quereinstieg",
           "https://www.medizin.rwth-aachen.de/cms/medizin/studium/rund-ums-studium/bewerbung-und-zulassung/~cksz/ortswechsel-und-quereinstieg/"
@@ -24,7 +27,9 @@
         "ss": "kein Verfahren (Studienstart nur im WS)",
         "gilt": "nur 1. FS",
         "url": "https://www.rwth-aachen.de/cms/root/Studium/Vor-dem-Studium/Vergabeverfahren/~bxol/Losverfahren/"
-      }
+      },
+      "kurz": "Aachen",
+      "land": "Nordrhein-Westfalen"
     },
     {
       "id": "frankfurt",
@@ -35,7 +40,10 @@
       "art": "Nur online",
       "mail": "ssc@uni-frankfurt.de",
       "links": [
-        ["Bewerbungsportal", "https://goethe-campus.uni-frankfurt.de/"],
+        [
+          "Bewerbungsportal",
+          "https://goethe-campus.uni-frankfurt.de/"
+        ],
         [
           "Info Hochschulwechsel",
           "https://www.med.uni-frankfurt.de/62187971/hochschulwechsel"
@@ -46,7 +54,9 @@
         "ss": "noch kein Termin (im SS nur Zahnmedizin)",
         "gilt": "keine Angabe",
         "url": "https://www.uni-frankfurt.de/de/studium/bewerbung-einschreibung/losverfahren"
-      }
+      },
+      "kurz": "Frankfurt",
+      "land": "Hessen"
     },
     {
       "id": "goettingen",
@@ -57,7 +67,10 @@
       "art": "Nur online",
       "mail": "infoline-studium@uni-goettingen.de",
       "links": [
-        ["Bewerbungsportal", "https://immatrikulation.zvw.uni-goettingen.de/"],
+        [
+          "Bewerbungsportal",
+          "https://immatrikulation.zvw.uni-goettingen.de/"
+        ],
         [
           "Info höheres Fachsemester",
           "https://www.uni-goettingen.de/de/53417.html"
@@ -68,7 +81,9 @@
         "ss": "noch kein Termin",
         "gilt": "keine Angabe",
         "url": "https://www.uni-goettingen.de/de/47375.html"
-      }
+      },
+      "kurz": "Göttingen",
+      "land": "Niedersachsen"
     },
     {
       "id": "freiburg",
@@ -79,7 +94,10 @@
       "art": "Nur online",
       "mail": "studienberatung@service.uni-freiburg.de",
       "links": [
-        ["Bewerbungsportal", "https://campus.uni-freiburg.de/"],
+        [
+          "Bewerbungsportal",
+          "https://campus.uni-freiburg.de/"
+        ],
         [
           "Info höheres Fachsemester",
           "https://uni-freiburg.de/med/studium-und-lehre/studiengaenge/humanmedizin/hm-vor-dem-studium/hm-bewerbunghoeheresfs/"
@@ -90,7 +108,9 @@
         "ss": "kein Verfahren für Medizin (im SS nur Zahnmedizin)",
         "gilt": "keine Angabe",
         "url": "https://uni-freiburg.de/studium/bewerben/termine-und-fristen/#Losverfahren"
-      }
+      },
+      "kurz": "Freiburg",
+      "land": "Baden-Württemberg"
     },
     {
       "id": "saarland",
@@ -101,7 +121,10 @@
       "art": "Nur online",
       "mail": "studienberatung@uni-saarland.de",
       "links": [
-        ["Bewerbungsportal", "https://sim.uni-saarland.de/bewerbung"],
+        [
+          "Bewerbungsportal",
+          "https://sim.uni-saarland.de/bewerbung"
+        ],
         [
           "Info höheres Fachsemester",
           "https://www.uni-saarland.de/studium/bewerbung/grundstaendig/hoeheres.html"
@@ -112,7 +135,9 @@
         "ss": "kein Verfahren",
         "gilt": "keine Angabe",
         "url": "https://www.uni-saarland.de/studium/bewerbung/losverfahren.html"
-      }
+      },
+      "kurz": "Saarland (Homburg)",
+      "land": "Saarland"
     },
     {
       "id": "hannover",
@@ -134,7 +159,9 @@
         "ss": "kein Verfahren",
         "gilt": "nur 1. FS",
         "url": "https://www.mhh.de/studierendensekretariat/losverfahren"
-      }
+      },
+      "kurz": "MHH Hannover",
+      "land": "Niedersachsen"
     },
     {
       "id": "muenster",
@@ -159,7 +186,9 @@
         "ss": "15.03. – 22.03.2027",
         "gilt": "nur 1. FS",
         "url": "https://www.uni-muenster.de/studieninteressierte/bewerbung/losverfahren.html"
-      }
+      },
+      "kurz": "Münster",
+      "land": "Nordrhein-Westfalen"
     },
     {
       "id": "regensburg",
@@ -170,14 +199,19 @@
       "art": "Nur online",
       "mail": "studienberatung@ur.de",
       "links": [
-        ["Bewerbungsportal", "https://campusportal.uni-regensburg.de/"]
+        [
+          "Bewerbungsportal",
+          "https://campusportal.uni-regensburg.de/"
+        ]
       ],
       "los": {
         "ws": "01.10. – 10.10.2026",
         "ss": "kein Verfahren für Medizin (nur Zahnmedizin)",
         "gilt": "nur 1. FS",
         "url": "https://www.uni-regensburg.de/studieren/wege-ins-studium/zugang-bewerbung-und-einschreibung/bewerbung"
-      }
+      },
+      "kurz": "Regensburg",
+      "land": "Bayern"
     },
     {
       "id": "erlangen",
@@ -188,7 +222,10 @@
       "art": "Online (campo) + Post",
       "mail": "zsb@fau.de",
       "links": [
-        ["Bewerbungsportal (campo)", "https://campo.fau.de/"],
+        [
+          "Bewerbungsportal (campo)",
+          "https://campo.fau.de/"
+        ],
         [
           "Info & Unterlagen",
           "https://www.fau.de/education/bewerbung/zulassungsbeschraenkte-faecher-nc/bewerbung-hoeheres-fachsemester-wise/"
@@ -199,7 +236,9 @@
         "ss": "20.03. – 30.03.2027",
         "gilt": "keine Angabe",
         "url": "https://www.fau.de/studium/bewerbung-und-zulassung/bewerbung-bachelor-lehramt-staatsexamen/studiengaenge-mit-nc/"
-      }
+      },
+      "kurz": "Erlangen",
+      "land": "Bayern"
     },
     {
       "id": "ulm",
@@ -225,7 +264,9 @@
         "ss": "kein Verfahren",
         "gilt": "nur 1. FS",
         "url": "https://www.uni-ulm.de/studium/bewerbung-und-immatrikulation/losverfahren/"
-      }
+      },
+      "kurz": "Ulm",
+      "land": "Baden-Württemberg"
     },
     {
       "id": "wuerzburg",
@@ -235,13 +276,20 @@
       "nach": "–",
       "art": "Online + Post (optional + Postkarte)",
       "mail": "studienberatung@uni-wuerzburg.de",
-      "links": [["Bewerbungsportal", "https://wuestudy.zv.uni-wuerzburg.de/"]],
+      "links": [
+        [
+          "Bewerbungsportal",
+          "https://wuestudy.zv.uni-wuerzburg.de/"
+        ]
+      ],
       "los": {
         "ws": "01.10. – 10.10.2026",
         "ss": "01.04. – 10.04.2027",
         "gilt": "nur 1. FS",
         "url": "https://www.uni-wuerzburg.de/studium/studienangelegenheiten/bewerbung-und-einschreibung/bewerbungundzulassunguebersich/losverfahren-allgemeine-informationen/"
-      }
+      },
+      "kurz": "Würzburg",
+      "land": "Bayern"
     },
     {
       "id": "rostock",
@@ -262,7 +310,9 @@
         "ss": "kein Verfahren",
         "gilt": "nur 1. FS",
         "url": "https://www.uni-rostock.de/studium/deutsche-studieninteressierte/studienplatzbewerbung/medizinische-studiengaenge/losverfahren/"
-      }
+      },
+      "kurz": "Rostock",
+      "land": "Mecklenburg-Vorpommern"
     },
     {
       "id": "kiel",
@@ -274,7 +324,10 @@
       "mail": "zsb@uv.uni-kiel.de",
       "hinweis": "In das 5. Fachsemester (1. klinisches Semester) ist eine Bewerbung nur zum Sommersemester möglich.",
       "links": [
-        ["Bewerbungsportal", "https://h1-prod-web-all.uv.uni-kiel.de/"],
+        [
+          "Bewerbungsportal",
+          "https://h1-prod-web-all.uv.uni-kiel.de/"
+        ],
         [
           "Unterlagen",
           "https://www.studium.uni-kiel.de/de/bewerbung-einschreibung/bewerbung/bewerbungsunterlagen/"
@@ -285,7 +338,9 @@
         "ss": "Termin offen (FS 2, 4, 5–10)",
         "gilt": "auch höhere FS",
         "url": "https://www.studium.uni-kiel.de/de/bewerbung-einschreibung/bewerbung/losverfahren"
-      }
+      },
+      "kurz": "Kiel",
+      "land": "Schleswig-Holstein"
     },
     {
       "id": "luebeck",
@@ -313,7 +368,9 @@
         "gilt": "–",
         "url": "https://www2.uni-luebeck.de/studium/medizin-und-gesundheitswissenschaften/humanmedizin/bewerben/",
         "ohne": "kein Losverfahren"
-      }
+      },
+      "kurz": "Lübeck",
+      "land": "Schleswig-Holstein"
     },
     {
       "id": "magdeburg",
@@ -323,13 +380,20 @@
       "nach": "–",
       "art": "Online + Post",
       "mail": "ulrich.schmidt@ovgu.de",
-      "links": [["Bewerbungsportal", "https://myovgu.ovgu.de/"]],
+      "links": [
+        [
+          "Bewerbungsportal",
+          "https://myovgu.ovgu.de/"
+        ]
+      ],
       "los": {
         "ws": "15.09. – 30.09.2026",
         "ss": "kein Verfahren",
         "gilt": "nur 1. FS",
         "url": "https://www.ovgu.de/Studieninteressierte/Studium+organisieren/Immatrikulation+_+Bewerbung/Losverfahren.html"
-      }
+      },
+      "kurz": "Magdeburg",
+      "land": "Sachsen-Anhalt"
     },
     {
       "id": "mainz",
@@ -339,13 +403,20 @@
       "nach": "–",
       "art": "Online + Post",
       "mail": "zsb@uni-mainz.de",
-      "links": [["Bewerbungsportal", "https://jogustine.uni-mainz.de/"]],
+      "links": [
+        [
+          "Bewerbungsportal",
+          "https://jogustine.uni-mainz.de/"
+        ]
+      ],
       "los": {
         "ws": "Anfang Sept. – 30.09.2026 (allgemein, Medizin bisher nie verlost)",
         "ss": "Anfang März – 31.03.2027 (allgemein)",
         "gilt": "keine Angabe",
         "url": "https://www.studium.uni-mainz.de/meine-bewerbung/bewerbungsverfahren/losverfahren/"
-      }
+      },
+      "kurz": "Mainz",
+      "land": "Rheinland-Pfalz"
     },
     {
       "id": "marburg",
@@ -356,7 +427,10 @@
       "art": "Online + Post",
       "mail": "info@uni-marburg.de",
       "links": [
-        ["Bewerbungsportal", "https://marvin.uni-marburg.de/"],
+        [
+          "Bewerbungsportal",
+          "https://marvin.uni-marburg.de/"
+        ],
         [
           "Info höhere Fachsemester",
           "https://www.uni-marburg.de/de/studium/vor-dem-studium/bewerben-und-einschreiben/bewerbung-formalia-fristen/hoehere-fachsemester/nc-hoehere-fachsemester"
@@ -367,7 +441,9 @@
         "ss": "kein Verfahren für Medizin",
         "gilt": "keine Angabe",
         "url": "https://www.uni-marburg.de/de/studium/vor-dem-studium/bewerben-und-einschreiben/studienplatzvergabe/restvergabeverfahren"
-      }
+      },
+      "kurz": "Marburg",
+      "land": "Hessen"
     },
     {
       "id": "oldenburg",
@@ -378,7 +454,10 @@
       "art": "Online + Post",
       "mail": "studium@uol.de",
       "links": [
-        ["Bewerbungsportal", "https://stums.uni-oldenburg.de/"],
+        [
+          "Bewerbungsportal",
+          "https://stums.uni-oldenburg.de/"
+        ],
         [
           "Info höheres Fachsemester",
           "https://uol.de/studium/bewerben/humanmedizin/hoeheres-fachsemester"
@@ -389,7 +468,9 @@
         "ss": "kein Verfahren",
         "gilt": "nur 1. FS",
         "url": "https://uol.de/studium/bewerben/humanmedizin/1-fachsemester-hochschulstart"
-      }
+      },
+      "kurz": "Oldenburg",
+      "land": "Niedersachsen"
     },
     {
       "id": "augsburg",
@@ -400,13 +481,20 @@
       "nach": "–",
       "art": "Online + Post",
       "mail": "info@zsb.uni-augsburg.de",
-      "links": [["Bewerbungsportal", "https://vibs.uni-augsburg.de/"]],
+      "links": [
+        [
+          "Bewerbungsportal",
+          "https://vibs.uni-augsburg.de/"
+        ]
+      ],
       "los": {
         "ws": "bisher nie durchgeführt (Antrag per E-Mail)",
         "ss": "kein Verfahren",
         "gilt": "keine Angabe",
         "url": "https://www.uni-augsburg.de/de/studium/bewerbung/bewerbung/verfahrensablauf/zulassungsbeschraenkt/losverfahren/"
-      }
+      },
+      "kurz": "Augsburg",
+      "land": "Bayern"
     },
     {
       "id": "muenchen-lmu",
@@ -433,7 +521,9 @@
         "gilt": "keine Angabe",
         "url": "https://www.lmu.de/de/studium/hochschulzugang/besondere-zulassungsformen/index.html",
         "ohne": "Humanmedizin bisher nie im Losverfahren"
-      }
+      },
+      "kurz": "LMU München",
+      "land": "Bayern"
     },
     {
       "id": "koeln",
@@ -444,7 +534,10 @@
       "art": "Nur online",
       "mail": "studsek@verw.uni-koeln.de",
       "links": [
-        ["Bewerbungsportal", "https://klips2.uni-koeln.de/co/webnav.ini"],
+        [
+          "Bewerbungsportal",
+          "https://klips2.uni-koeln.de/co/webnav.ini"
+        ],
         [
           "Info höheres Fachsemester",
           "https://studsek.uni-koeln.de/bewerbung/hoeheres_fachsemester/index_ger.html"
@@ -456,7 +549,9 @@
         "gilt": "–",
         "url": "https://studsek.uni-koeln.de/bewerbung/1_fachsemester___grundstaendige_studiengaenge/losverfahren/index_ger.html",
         "ohne": "kein Losverfahren für Human- und Zahnmedizin"
-      }
+      },
+      "kurz": "Köln",
+      "land": "Nordrhein-Westfalen"
     },
     {
       "id": "leipzig",
@@ -466,14 +561,21 @@
       "nach": "–",
       "art": "Nur online",
       "mail": "ssz-studienberatung@uni-leipzig.de",
-      "links": [["Bewerbungsportal", "https://almaweb.uni-leipzig.de/"]],
+      "links": [
+        [
+          "Bewerbungsportal",
+          "https://almaweb.uni-leipzig.de/"
+        ]
+      ],
       "los": {
         "ws": "kein eigenes Losverfahren angekündigt",
         "ss": "kein Verfahren",
         "gilt": "–",
         "url": "",
         "ohne": "kein eigenes Losverfahren angekündigt"
-      }
+      },
+      "kurz": "Leipzig",
+      "land": "Sachsen"
     },
     {
       "id": "dresden",
@@ -484,7 +586,10 @@
       "art": "Online + Post",
       "mail": "servicecenter.studium@tu-dresden.de",
       "links": [
-        ["Bewerbungsportal", "https://selma.tu-dresden.de/"],
+        [
+          "Bewerbungsportal",
+          "https://selma.tu-dresden.de/"
+        ],
         [
           "Unterlagen höheres Fachsemester",
           "https://tu-dresden.de/studium/vor-dem-studium/bewerbung/online-bewerbung/einzureichende-bewerbungsunterlagen-fuer-h-fs-in-medizinischen-studiengaengen"
@@ -496,7 +601,9 @@
         "gilt": "nur 1. FS",
         "url": "https://tu-dresden.de/studium/vor-dem-studium/bewerbung/online-bewerbung/losverfahren",
         "ohne": "Medizin zum WiSe 2026/27 nicht im Losverfahren"
-      }
+      },
+      "kurz": "Dresden",
+      "land": "Sachsen"
     },
     {
       "id": "jena",
@@ -509,7 +616,10 @@
       "post": "FSU Jena, Studierenden-Service-Zentrum, Fürstengraben 1, 07743 Jena",
       "hinweis": "Zum Wintersemester nur Bewerbung in ungerade Fachsemester (3, 5, 7, 9).",
       "links": [
-        ["Bewerbungsportal", "https://friedolin2.uni-jena.de/"],
+        [
+          "Bewerbungsportal",
+          "https://friedolin2.uni-jena.de/"
+        ],
         [
           "Info höheres Fachsemester",
           "https://www.uni-jena.de/10090/bewerbung-fuer-studiengaenge-im-hoeheren-fachsemester"
@@ -520,7 +630,9 @@
         "ss": "kein Verfahren",
         "gilt": "nur 1. FS",
         "url": "https://www.uni-jena.de/7680/losverfahren"
-      }
+      },
+      "kurz": "Jena",
+      "land": "Thüringen"
     },
     {
       "id": "tuebingen",
@@ -531,7 +643,10 @@
       "art": "Nur online",
       "mail": "zsb@uni-tuebingen.de",
       "links": [
-        ["Bewerbungsportal", "https://alma.uni-tuebingen.de/"],
+        [
+          "Bewerbungsportal",
+          "https://alma.uni-tuebingen.de/"
+        ],
         [
           "Info höheres Fachsemester",
           "https://uni-tuebingen.de/studium/bewerbung-und-immatrikulation/bewerbung-hoeheres-fachsemester/"
@@ -542,7 +657,9 @@
         "ss": "01.03. – 20.03.2027 (allgemein)",
         "gilt": "nur 1. FS",
         "url": "https://uni-tuebingen.de/studium/bewerbung-und-immatrikulation/sonderfaelle-bewerbung/losverfahren/"
-      }
+      },
+      "kurz": "Tübingen",
+      "land": "Baden-Württemberg"
     },
     {
       "id": "greifswald",
@@ -553,7 +670,10 @@
       "art": "Online + Post",
       "mail": "zsb@uni-greifswald.de",
       "links": [
-        ["Bewerbungsportal", "https://his.uni-greifswald.de/"],
+        [
+          "Bewerbungsportal",
+          "https://his.uni-greifswald.de/"
+        ],
         [
           "Antrag & Unterlagen",
           "https://www.uni-greifswald.de/studium/vor-dem-studium/formulare/antrag-auf-zulassung-in-ein-hoeheres-fachsemester/"
@@ -564,7 +684,9 @@
         "ss": "kein Verfahren",
         "gilt": "nur 1. FS",
         "url": "https://www.uni-greifswald.de/studium/vor-dem-studium/bewerbung-in-nc-studienfaecher/los/"
-      }
+      },
+      "kurz": "Greifswald",
+      "land": "Mecklenburg-Vorpommern"
     },
     {
       "id": "duisburg-essen",
@@ -589,7 +711,9 @@
         "ss": "kein Verfahren für Medizin",
         "gilt": "keine Angabe",
         "url": "https://www.uni-due.de/studierendensekretariat/losverfahren.shtml"
-      }
+      },
+      "kurz": "Duisburg-Essen",
+      "land": "Nordrhein-Westfalen"
     },
     {
       "id": "duesseldorf",
@@ -612,7 +736,9 @@
         "gilt": "keine Angabe",
         "url": "https://www.hhu.de/studium/bewerbung-und-einschreibung/bewerbungsportal/informationen-zur-teilnahme-am-losverfahren",
         "ohne": "Medizin derzeit nicht im Losverfahren"
-      }
+      },
+      "kurz": "Düsseldorf",
+      "land": "Nordrhein-Westfalen"
     },
     {
       "id": "charite-berlin",
@@ -635,7 +761,9 @@
         "ss": "15.03. – 01.04.2027 (allgemein)",
         "gilt": "nur 1. FS",
         "url": "https://www.charite.de/studium_lehre/bewerbung_zulassung/losverfahren/"
-      }
+      },
+      "kurz": "Charité Berlin",
+      "land": "Berlin"
     },
     {
       "id": "giessen",
@@ -661,7 +789,9 @@
         "ss": "noch offen",
         "gilt": "auch höhere FS",
         "url": "https://www.uni-giessen.de/studium/bewerbung/a-z/losverfahren"
-      }
+      },
+      "kurz": "Gießen",
+      "land": "Hessen"
     },
     {
       "id": "halle",
@@ -682,7 +812,9 @@
         "ss": "nur höhere FS, Termin offen",
         "gilt": "auch höhere FS",
         "url": "https://immaamt.verwaltung.uni-halle.de/bewerbung/los/"
-      }
+      },
+      "kurz": "Halle",
+      "land": "Sachsen-Anhalt"
     },
     {
       "id": "heidelberg",
@@ -694,7 +826,10 @@
       "mail": "studium@uni-heidelberg.de",
       "post": "Universität Heidelberg, Studierendenadministration, Seminarstr. 2, 69117 Heidelberg",
       "links": [
-        ["Bewerbungsportal (heiCO)", "https://heico.uni-heidelberg.de/heiCO/"],
+        [
+          "Bewerbungsportal (heiCO)",
+          "https://heico.uni-heidelberg.de/heiCO/"
+        ],
         [
           "Info & Unterlagen",
           "https://www.uni-heidelberg.de/de/studium/bewerben-einschreiben/studieneinstieg-im-hoeheren-fachsemester/"
@@ -709,7 +844,9 @@
         "ss": "15.03. – 15.04.2027 (nur höhere FS)",
         "gilt": "auch höhere FS",
         "url": "https://www.uni-heidelberg.de/de/studium/bewerben-einschreiben/losverfahren"
-      }
+      },
+      "kurz": "Heidelberg",
+      "land": "Baden-Württemberg"
     },
     {
       "id": "mannheim",
@@ -731,7 +868,9 @@
         "ss": "kein Verfahren",
         "gilt": "keine Angabe",
         "url": "https://www.uni-heidelberg.de/de/studium/bewerben-einschreiben/losverfahren"
-      }
+      },
+      "kurz": "Mannheim",
+      "land": "Baden-Württemberg"
     },
     {
       "id": "bochum",
@@ -742,7 +881,10 @@
       "art": "Post",
       "mail": "webteam@uv.rub.de",
       "links": [
-        ["Bewerbungsportal", "https://zulixinfo.uv.ruhr-uni-bochum.de/"],
+        [
+          "Bewerbungsportal",
+          "https://zulixinfo.uv.ruhr-uni-bochum.de/"
+        ],
         [
           "Info & Unterlagen",
           "https://www.ruhr-uni-bochum.de/studierendensekretariat/studium/bewerbung_zulassung/hoehere_fachsemester.html.de"
@@ -753,7 +895,9 @@
         "ss": "kein Verfahren",
         "gilt": "nur 1. FS",
         "url": "https://studium.ruhr-uni-bochum.de/de/losverfahren"
-      }
+      },
+      "kurz": "Bochum",
+      "land": "Nordrhein-Westfalen"
     },
     {
       "id": "bonn",
@@ -778,7 +922,9 @@
         "ss": "kein Verfahren",
         "gilt": "nur 1. FS",
         "url": "https://www.uni-bonn.de/de/studium/bewerbung-zulassung-und-einschreibung/besondere-bewerbungsanliegen/losverfahren"
-      }
+      },
+      "kurz": "Bonn",
+      "land": "Nordrhein-Westfalen"
     },
     {
       "id": "muenchen-tum",
@@ -806,7 +952,9 @@
         "gilt": "–",
         "url": "",
         "ohne": "kein gesondertes Losverfahren bekannt"
-      }
+      },
+      "kurz": "TU München",
+      "land": "Bayern"
     },
     {
       "id": "hamburg",
@@ -819,7 +967,10 @@
       "kontakt": "nur Kontaktformular / Telefon",
       "hinweis": "Bewerbung erst ab dem 5. Fachsemester (2. Studienabschnitt) und nur zum Sommersemester; Unterlagen nur bis 15.01. hochladbar.",
       "links": [
-        ["Bewerbungsportal", "https://www.stine.uni-hamburg.de/"],
+        [
+          "Bewerbungsportal",
+          "https://www.stine.uni-hamburg.de/"
+        ],
         [
           "Merkblatt 2. Studienabschnitt",
           "https://www.uni-hamburg.de/campuscenter/studienorganisation/formulare-informationsmerkblaetter/zweiter-abschnitt-human-und-zahnmedizin.pdf"
@@ -830,7 +981,9 @@
         "ss": "kein Verfahren",
         "gilt": "nur 1. FS",
         "url": "https://www.uni-hamburg.de/campuscenter/bewerbung/bachelor-staatsexamen/bewerbungsverfahren/auswahlverfahren-hochschulstart.html"
-      }
+      },
+      "kurz": "Hamburg",
+      "land": "Hamburg"
     },
     {
       "id": "bielefeld",
@@ -842,7 +995,10 @@
       "art": "Online",
       "kontakt": "Kontaktformular des Studierendensekretariats",
       "links": [
-        ["Bewerbungsportal", "https://campus.uni-bielefeld.de/"],
+        [
+          "Bewerbungsportal",
+          "https://campus.uni-bielefeld.de/"
+        ],
         [
           "Info höheres Fachsemester",
           "https://www.uni-bielefeld.de/studium/studieninteressierte/bewerbung/hoeheres-fachsemester/"
@@ -857,7 +1013,9 @@
         "ss": "kein Verfahren für Medizin",
         "gilt": "keine Angabe",
         "url": "https://www.uni-bielefeld.de/studium/studieninteressierte/bewerbung/losverfahren/"
-      }
+      },
+      "kurz": "Bielefeld",
+      "land": "Nordrhein-Westfalen"
     },
     {
       "id": "bayreuth",
@@ -871,12 +1029,18 @@
       "kontakt": "(FAU)",
       "hinweis": "Medizincampus Oberfranken: klinischer Studienabschnitt seit 2017 in Kooperation mit der FAU Erlangen-Nürnberg. Die Bewerbung ins höhere Fachsemester läuft über die FAU Erlangen-Nürnberg.",
       "links": [
-        ["Bewerbungsportal (FAU)", "https://campo.fau.de/"],
+        [
+          "Bewerbungsportal (FAU)",
+          "https://campo.fau.de/"
+        ],
         [
           "Info & Unterlagen",
           "https://www.fau.de/education/bewerbung/zulassungsbeschraenkte-faecher-nc/bewerbung-hoeheres-fachsemester-wise/"
         ],
-        ["Zur FAU Erlangen-Nürnberg", "#erlangen"]
+        [
+          "Zur FAU Erlangen-Nürnberg",
+          "#erlangen"
+        ]
       ],
       "los": {
         "ws": "über FAU (20.09. – 30.09.2026)",
@@ -884,7 +1048,9 @@
         "gilt": "keine Angabe",
         "url": "",
         "ohne": "eigenes Losverfahren nicht bekannt (über FAU)"
-      }
+      },
+      "kurz": "Bayreuth",
+      "land": "Bayern"
     }
   ]
 }

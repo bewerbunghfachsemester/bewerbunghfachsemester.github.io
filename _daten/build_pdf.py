@@ -52,7 +52,8 @@ tr { break-inside: avoid; }
 .scope { display: block; font-size: 7.3pt; color: #444; }
 .scope.higher { color: #111; font-weight: 700; }
 a { color: #0b4fb3; text-decoration: none; }
-.links a { display: block; }
+.links a { display: block; padding: 2.5pt 0; }
+.links a + a { border-top: 0.6pt solid #b9b9b9; }
 .foot { margin-top: 8pt; font-size: 7.4pt; color: #444; }
 """
 
