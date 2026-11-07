@@ -57,8 +57,9 @@ tr { break-inside: avoid; }
 .scope { display: block; font-size: 7.3pt; color: #444; }
 .scope.higher { color: #111; font-weight: 700; }
 a { color: #111; text-decoration: underline; text-decoration-color: #ff5b14; text-underline-offset: 1.5pt; }
-.links a { display: block; padding: 2.5pt 0; }
-.links a + a { border-top: 0.6pt solid #b9b9b9; }
+.links { counter-reset: link; }
+.links a { display: block; padding: 2pt 0; counter-increment: link; }
+.links a::before { content: counter(link) "."; display: inline-block; width: 10pt; font-family: "IBM Plex Mono", Menlo, monospace; font-size: 7pt; color: #5f5f58; text-decoration: none; }
 .foot { margin-top: 8pt; font-size: 7.4pt; color: #444; }
 """
 
