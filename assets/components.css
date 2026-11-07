@@ -1,0 +1,430 @@
+/* bewerbungsrenner.com – Bausteine: Kopfbereich, Countdown, Bewerbungsjahr, Laufband, Inhalte */
+
+/* Kopfbereich */
+.hero .wrap {
+  padding-top: clamp(28px, 5vw, 72px);
+}
+
+.breadcrumb {
+  margin-bottom: clamp(20px, 3vw, 36px);
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0 0 28px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 64px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.hero h1 {
+  flex: 1 1 620px;
+  font-size: clamp(44px, 7.4vw, 112px);
+  font-stretch: 72%;
+  font-weight: 760;
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+}
+
+.hero h1.compact {
+  font-size: clamp(38px, 5.6vw, 84px);
+}
+
+.hero h1 .line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.06em;
+}
+
+.hero h1 .line > span {
+  display: block;
+}
+
+.hero-lead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 64px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ink);
+}
+
+.hero-lead .big {
+  flex: 1 1 460px;
+  max-width: 640px;
+  margin: 0;
+  font-size: clamp(19px, 1.7vw, 24px);
+  line-height: 1.4;
+}
+
+.hero-side {
+  flex: 1 1 380px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 16px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 24px;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.cta:hover {
+  color: var(--paper);
+  background: #2b2b28;
+}
+
+.stand {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.chip:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Countdown */
+.countdown {
+  flex: 0 1 300px;
+  padding-top: 14px;
+  border-top: 2px solid var(--ink);
+}
+
+.countdown .label,
+.countdown .hint {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.countdown .hint {
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.countdown .figure {
+  display: none;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.countdown.is-ready .figure {
+  display: flex;
+}
+
+.countdown .digits {
+  display: flex;
+  font-size: 128px;
+  font-weight: 740;
+  font-stretch: 70%;
+  line-height: 1;
+}
+
+.countdown .digit {
+  display: block;
+  height: 1em;
+  overflow: hidden;
+}
+
+.countdown .digit > span {
+  display: block;
+  transform: translateY(var(--to));
+}
+
+.countdown .digit > span > span {
+  display: block;
+  height: 1em;
+}
+
+.countdown .unit {
+  padding-bottom: 18px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.countdown .text {
+  margin: 4px 0 0;
+}
+
+/* Bewerbungsjahr */
+.jahr {
+  margin-top: 72px;
+}
+
+.jahr-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 32px;
+  margin-bottom: 14px;
+}
+
+.jahr-head h2 {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: 100%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swatch {
+  width: 18px;
+  height: 9px;
+  background: var(--ink);
+}
+
+.swatch.ext {
+  background: #cfcfc9;
+}
+
+.swatch.los {
+  background: var(--acc);
+}
+
+.jahr-chart {
+  position: relative;
+  overflow-x: clip;
+  padding-top: 30px;
+  border-top: 1px solid var(--ink);
+}
+
+.jahr-grid,
+.jahr-months {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.jahr-grid {
+  position: absolute;
+  inset: 30px 0 0 0;
+}
+
+.jahr-grid span {
+  border-left: 1px solid var(--grid);
+}
+
+.jahr-months {
+  position: relative;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.jahr-months span {
+  padding: 0 0 10px 6px;
+}
+
+.jahr-progress {
+  position: relative;
+  height: 2px;
+  background: var(--grid);
+}
+
+.jahr-progress .bar {
+  width: var(--today, 0%);
+  background: var(--ink);
+}
+
+.jahr-track {
+  position: relative;
+  padding: 14px 0 12px;
+}
+
+.jahr-track p {
+  position: relative;
+  margin: 0 0 7px 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.jahr-bars {
+  position: relative;
+  height: 22px;
+}
+
+.jahr-bars.tall {
+  height: 40px;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--ink);
+  transform-origin: left center;
+}
+
+.bar.ext {
+  background: #cfcfc9;
+}
+
+.bar.los {
+  background: var(--acc);
+}
+
+.bar-label {
+  position: absolute;
+  top: 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.jahr-today {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--today, 0%);
+  width: 0;
+}
+
+.jahr-today .today-label {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.jahr-today.flip .today-label {
+  left: auto;
+  right: 10px;
+}
+
+.jahr-today .today-line {
+  position: absolute;
+  top: 30px;
+  bottom: 0;
+  left: -1px;
+  width: 2px;
+  background: var(--acc);
+  transform-origin: top center;
+}
+
+.jahr-today .today-dot,
+.jahr-today .today-pulse {
+  position: absolute;
+  top: 25px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--acc);
+}
+
+/* Laufband */
+.ticker {
+  margin-top: 40px;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  padding: 15px 0;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding-right: 36px;
+  white-space: nowrap;
+}
+
+.ticker-item::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--acc);
+}
+
+.ticker-item span {
+  color: #a9a9a3;
+}
+
+@media (max-width: 560px) {
+  .bar-label {
+    display: none;
+  }
+}

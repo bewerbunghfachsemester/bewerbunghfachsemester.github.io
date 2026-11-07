@@ -1,0 +1,422 @@
+/* bewerbungsrenner.com – Uni-Liste, Losverfahren-Liste, Grafiken (Ziehung, Hörsaal, 404) */
+
+.list-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.search {
+  display: flex;
+  flex: 1 1 320px;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 460px;
+}
+
+.search label,
+.list-meta p,
+.mlabel,
+.list-head {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.search input {
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+  font: inherit;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.list-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+}
+
+.list-meta p {
+  margin: 0;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.uni-row,
+.list-head.uni,
+.los-row,
+.list-head.los {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+}
+
+.uni-row,
+.list-head.uni {
+  grid-template-columns:
+    minmax(0, 2.3fr) repeat(2, minmax(0, 1fr)) minmax(0, 1.1fr)
+    minmax(0, 1.6fr);
+}
+
+.los-row,
+.list-head.los {
+  grid-template-columns:
+    minmax(0, 2.1fr) minmax(0, 1.4fr) minmax(0, 1.4fr)
+    170px;
+}
+
+.list-head {
+  padding: 12px 0;
+}
+
+.list-head span:first-child {
+  padding-left: 26px;
+}
+
+.list-head.los span:first-child {
+  padding-left: 0;
+}
+
+.mlabel {
+  display: none;
+}
+
+.num {
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Uni-Liste mit Aufklappen */
+details.uni {
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 16px;
+}
+
+.uni-row {
+  min-height: 60px;
+  padding: 8px 0;
+  list-style: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.15s;
+}
+
+.uni-row::-webkit-details-marker {
+  display: none;
+}
+
+.uni-row:hover {
+  background: var(--soft);
+}
+
+.c-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.plus {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  transition: transform 0.25s;
+}
+
+details.uni[open] .plus {
+  transform: rotate(45deg);
+}
+
+.tag {
+  padding: 2px 6px;
+  border: 1px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tag.higher {
+  border-color: var(--acc);
+  box-shadow: inset 3px 0 0 var(--acc);
+}
+
+.los {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.dot {
+  flex: none;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+}
+
+.dot.on {
+  background: var(--acc);
+}
+
+.dot.off {
+  border: 1.5px solid #8c8c85;
+}
+
+.uni-panel {
+  padding: 6px 0 26px 26px;
+}
+
+.uni-panel .uni-facts {
+  max-width: 900px;
+}
+
+.list-empty,
+.list-foot {
+  margin: 0;
+  padding: 18px 0 0;
+  border-top: 2px solid var(--ink);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.list-empty {
+  padding: 28px 0;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+/* Losverfahren-Liste */
+.los-row {
+  min-height: 58px;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 16px;
+  font-size: 15px;
+}
+
+.los-row .c-name a {
+  text-decoration: none;
+}
+
+.los-row .c-name a:hover {
+  text-decoration: underline;
+}
+
+.c-link a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+}
+
+@media (max-width: 820px) {
+  .uni-row,
+  .los-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 6px 16px;
+    padding: 12px 0;
+  }
+
+  .c-name,
+  .c-los,
+  .c-link {
+    grid-column: 1 / -1;
+  }
+
+  .list-head.uni,
+  .list-head.los {
+    display: none;
+  }
+
+  .mlabel {
+    display: block;
+  }
+
+  .uni-panel {
+    padding-left: 0;
+  }
+
+  .uni-facts {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .uni-facts dd {
+    margin-bottom: 8px;
+  }
+}
+
+/* Grafik: Los-Ziehung */
+.ziehung {
+  flex: 0 1 380px;
+  margin: 0;
+}
+
+.ziehung-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 5px;
+  padding: 14px;
+  border: 1px solid var(--ink);
+}
+
+.ziehung-grid span {
+  display: block;
+  aspect-ratio: 1 / 1;
+  background: #e6e6e1;
+}
+
+.ziehung-grid .win {
+  background: var(--acc);
+}
+
+figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* Grafik: Hörsaal */
+.hoersaal {
+  flex: 0 1 400px;
+  margin: 0;
+}
+
+.hoersaal-room {
+  padding: 16px 16px 12px;
+  border: 1px solid var(--ink);
+}
+
+.hoersaal-seats {
+  display: grid;
+  grid-template-columns: repeat(14, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.hoersaal-seats span {
+  display: block;
+  aspect-ratio: 5 / 4;
+  border-radius: 4px 4px 1px 1px;
+  background: var(--ink);
+}
+
+.hoersaal-seats .s2 {
+  background: #8c8c85;
+}
+
+.hoersaal-seats .s3 {
+  background: var(--acc);
+}
+
+.hoersaal-stage {
+  height: 6px;
+  margin-top: 12px;
+  background: var(--ink);
+}
+
+.hoersaal figcaption {
+  display: block;
+}
+
+.hoersaal .legend {
+  margin-top: 4px;
+}
+
+/* 404 */
+.notfound .status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 28px;
+  padding: 12px 0;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.notfound .status .out::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 8px;
+  background: var(--acc);
+}
+
+.notfound-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 72px;
+  align-items: flex-end;
+  margin-top: 40px;
+}
+
+.big404 {
+  display: flex;
+  margin: 0;
+  font-size: clamp(140px, 22vw, 320px);
+  font-weight: 760;
+  font-stretch: 68%;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.runner-track {
+  position: relative;
+  height: 2px;
+  margin: 56px 0 72px;
+  background: var(--ink);
+}
+
+.runner {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 56px;
+  height: 12px;
+  background: var(--acc);
+}
+
+.big404 .digit {
+  display: block;
+  height: 1em;
+  overflow: hidden;
+}
+
+.big404 .digit > span {
+  display: block;
+  transform: translateY(var(--to));
+}
+
+.big404 .digit > span > span {
+  display: block;
+  height: 1em;
+}
