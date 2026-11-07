@@ -5,6 +5,7 @@ import json
 from common import (
     PDF_URL, SCOPE_ALSO_HIGHER, SCOPE_FIRST_ONLY, SCOPE_NONE, contact_html, esc, link_html,
 )
+from layout import THEME_COLOR, footer, head_assets, topbar
 
 SITE_URL = "https://www.bewerbungsrenner.com"
 SECTION_PATH = "/hoeheres-fachsemester/"
@@ -97,7 +98,7 @@ def structured_data(uni, stand_iso):
                      for block in (webpage, breadcrumb, faq))
 
 
-def head_html(uni, data, css, stand_iso):
+def head_html(uni, data, stand_iso):
     title = esc(TITLE.format(kurz=uni["kurz"]))
     description = esc(DESCRIPTION.format(name=uni["name"], stand=data["stand"]))
     url = page_url(uni)
@@ -117,12 +118,9 @@ def head_html(uni, data, css, stand_iso):
 <meta property="og:image" content="{SITE_URL}/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#7f1146">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<meta name="theme-color" content="{THEME_COLOR}">
+{head_assets()}
 {structured_data(uni, stand_iso)}
-<style>{css}</style>
 </head>"""
 
 
@@ -183,7 +181,7 @@ def section(number, anchor, heading, body):
     return f'<section id="{anchor}"><h2><span class="num">{number:02d}</span>{heading}</h2>{body}</section>'
 
 
-def page_html(uni, data, css, stand_iso):
+def page_html(uni, data, stand_iso):
     links = "".join(f"<li>{link_html(label, url, '↗' if url.startswith('http') else '↑')}</li>"
                     for label, url in uni["links"])
     intro = (f"Alles für deinen Wechsel ins höhere Fachsemester Humanmedizin an der Universität: Fristen, "
@@ -199,24 +197,21 @@ def page_html(uni, data, css, stand_iso):
     )
     return f"""<!doctype html>
 <html lang="de">
-{head_html(uni, data, css, stand_iso)}
+{head_html(uni, data, stand_iso)}
 <body>
-<div class="topbar"><div class="wrap"><a class="brand" href="/">bewerbungsrenner.com</a>
-<nav aria-label="Hauptmenü"><a href="/">Uni-Liste</a><a href="/losverfahren/">Losverfahren</a><a href="/medizin-restplaetze/">Restplätze</a></nav></div></div>
+{topbar()}
 <header class="hero"><div class="wrap">
-<nav class="breadcrumb" aria-label="Brotkrumen"><a href="/">Start</a> <span>›</span> <a href="/#liste">Uni-Liste</a> <span>›</span> {esc(uni['kurz'])}</nav>
+<nav class="breadcrumb" aria-label="Brotkrumen"><a href="/">Start</a> › <a href="/#liste">Uni-Liste</a> › {esc(uni['kurz'])}</nav>
 <p class="eyebrow">Höheres Fachsemester Medizin · {esc(uni['land'])}</p>
-<h1>Bewerbung höheres Fachsemester Medizin: {esc(uni['name'])}</h1>
-<p>{intro}</p>
-<div class="hero-actions"><a class="cta" href="{esc(uni['links'][0][1])}" target="_blank" rel="noopener nofollow">Zur Bewerbungsseite &rarr;</a><span class="stand">Stand: {esc(data['stand'])}</span></div>
+<h1 class="compact">Bewerbung höheres Fachsemester Medizin: {esc(uni['name'])}</h1>
+<div class="hero-lead"><p class="big">{intro}</p>
+<div class="hero-side"><p>{esc(deadlines_sentence(uni))}</p>
+<div class="hero-actions"><a class="cta" href="{esc(uni['links'][0][1])}" target="_blank" rel="noopener nofollow">Zur Bewerbungsseite →</a><span class="stand">Stand: {esc(data['stand'])}</span></div></div></div>
 </div></header>
 <main class="wrap">{body}
 <p class="note">Alle Angaben ohne Gewähr. Universitäten ändern Fristen, Portale und Anforderungen – bitte vor der Bewerbung die verlinkte offizielle Seite prüfen.</p>
 </main>
-<footer><div class="wrap"><h2>Fragen?</h2>
-<p>Bei Fragen, Korrekturen oder Hinweisen zu veralteten Links: <a href="mailto:bewerbung.h.fachsemester@gmail.com">bewerbung.h.fachsemester@gmail.com</a></p>
-<p style="margin-top: 18px; opacity: 0.75">© 2026 bewerbungsrenner.com · Kostenlose Uni-Liste höheres Fachsemester Medizin · <a href="/">Zur Startseite</a></p>
-</div></footer>
+{footer()}
 </body>
 </html>
 """
