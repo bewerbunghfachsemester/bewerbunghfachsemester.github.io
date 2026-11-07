@@ -4,8 +4,9 @@ import json
 import re
 import unittest
 
+from blocks import los_list_html, timeline_html, uni_item, uni_list_html
 from build_pdf import document_html
-from build_site import los_rows, start_card, start_rows
+from build_site import MarkerMissingError, fill_marker
 from build_unis import sitemap_xml
 from common import KNOWN_SCOPES, load_data
 from uni_page import page_html, page_url
@@ -51,26 +52,38 @@ class ErzeugteBloeckeTest(unittest.TestCase):
         cls.data = load_data()
         cls.unis = cls.data["unis"]
 
-    def test_startseiten_tabelle_enthaelt_jede_uni_genau_einmal(self):
-        rows = start_rows(self.unis)
-        self.assertEqual(rows.count("<tr>"), len(self.unis))
+    def test_uni_liste_enthaelt_jede_uni_genau_einmal(self):
+        html = uni_list_html(self.data)
+        self.assertEqual(html.count('<details class="uni"'), len(self.unis))
 
-    def test_uni_karte_behaelt_sprungmarke(self):
-        card = start_card(self.unis[0])
-        self.assertIn(f'id="{self.unis[0]["id"]}"', card)
+    def test_uni_eintrag_behaelt_sprungmarke_fuer_alte_links(self):
+        self.assertIn(f'id="{self.unis[0]["id"]}"', uni_item(self.unis[0]))
 
     def test_sonderzeichen_werden_escaped(self):
-        rows = start_rows([{**self.unis[0], "name": "A & B <C>"}])
-        self.assertIn("A &amp; B &lt;C&gt;", rows)
+        html = uni_item({**self.unis[0], "name": "A & B <C>"})
+        self.assertIn("A &amp; B &lt;C&gt;", html)
 
     def test_pdf_enthaelt_klickbare_portal_links(self):
         html = document_html(self.data)
         self.assertIn(f'href="{self.unis[0]["links"][0][1]}"', html)
 
-    def test_losverfahren_tabelle_zeigt_beide_semester(self):
-        rows = los_rows(self.unis[:1])
-        self.assertIn(self.unis[0]["los"]["ws"], rows)
-        self.assertIn(self.unis[0]["los"]["ss"], rows)
+    def test_losverfahren_liste_zeigt_beide_semester(self):
+        html = los_list_html(self.data, self.unis[:1])
+        self.assertIn(self.unis[0]["los"]["ws"], html)
+        self.assertIn(self.unis[0]["los"]["ss"], html)
+
+    def test_bewerbungsjahr_hat_drei_spuren_und_heute_markierung(self):
+        html = timeline_html()
+        self.assertEqual(html.count('class="jahr-track"'), 3)
+        self.assertIn("data-today", html)
+
+    def test_markierung_wird_gefuellt_und_bleibt_erhalten(self):
+        filled = fill_marker("a<!-- x:start -->alt<!-- x:end -->b", "x", "neu")
+        self.assertEqual(filled, "a<!-- x:start -->neu<!-- x:end -->b")
+
+    def test_fehlende_markierung_bricht_ab(self):
+        with self.assertRaises(MarkerMissingError):
+            fill_marker("ohne Markierung", "x", "neu")
 
 
 class UniUnterseitenTest(unittest.TestCase):
@@ -78,7 +91,7 @@ class UniUnterseitenTest(unittest.TestCase):
     def setUpClass(cls):
         cls.data = load_data()
         cls.unis = cls.data["unis"]
-        cls.pages = {uni["id"]: page_html(uni, cls.data, "", "2026-11-07") for uni in cls.unis}
+        cls.pages = {uni["id"]: page_html(uni, cls.data, "2026-11-07") for uni in cls.unis}
 
     def test_jede_uni_hat_kurzname_und_bundesland(self):
         for uni in self.unis:
