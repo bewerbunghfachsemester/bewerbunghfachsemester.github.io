@@ -117,7 +117,9 @@ def head_html(uni, data, stand_iso):
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{SITE_URL}/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="{THEME_COLOR}">
 {head_assets()}
 {structured_data(uni, stand_iso)}
